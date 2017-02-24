@@ -15,10 +15,20 @@
     }
     var counter = 0;
     for(var key in obj){
-      obj[key] = arr[counter];
-      counter++;
+        obj[key] = arr[counter];
+        counter++;
     }
-    $.post('validator.php',obj,function(data){console.log(data)},'json');
+    var callBack =  function(data){
+      $('input[type="text"]').removeClass('green');
+      if(data.result){
+        $('input[type="text"]').addClass('green');
+      }
+      else{
+        console.log(data);
+      }
+    }
+
+    $.post('validator.php',obj,callBack,'json');
   });
  })
 })(jQuery);
