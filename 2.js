@@ -19,12 +19,20 @@
         counter++;
     }
     var callBack =  function(data){
-      $('input[type="text"]').removeClass('green');
+      $(':text').removeClass('green').removeClass('red');
       if(data.result){
-        $('input[type="text"]').addClass('green');
+        $(':text').addClass('green');
       }
       else{
-        console.log(data);
+        $(':text').addClass('green');
+        Object.keys(data.error).map(function(key){
+          if(key == 'Credit Card'){
+            $('.CreditCard').addClass('red').val(data.error[key]);
+          }
+          else{
+            $('.' + key).addClass('red').val(data.error[key]);
+          }
+        });
       }
     }
 
