@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo');
 *{
   padding: 0;
   margin: 0;
 }
 body{
   background: #e5fce3;
+  font-family: 'Baloo', cursive;
 }
 ul{
   display: block;
@@ -21,8 +23,31 @@ li{
   height: 35px;
   line-height: 35px;
   border-radius: 6px 6px 0 0;
-  margin-right:-3px;
+  margin-right:-2px;
+}
+li:hover{
+background: #9ef7a5;
+}
+.activated{
+  box-sizing: border-box;
+  border-top: 1px solid #000;
+  background: white;
+  color: #000;
 }
 ul:first-child{
   margin-right: 0px;
+}
+.content{
+  background: #fff;
+  width: 803px;
+  min-height: 50px;
+  margin-left: 200px;
+  border-radius: 4px;
+  display: none;
+}
+.active{
+    display: block;
+}
+p{
+  padding:0 15px; 
 }
