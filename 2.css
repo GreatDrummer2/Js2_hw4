@@ -9,7 +9,7 @@ input{
 	width:1500px;
 	height:50px;
 	margin-left: 50px;
-	margin-bottom: 50px;
+	margin-bottom:0;
 	color:#21324f;
 	font-size: 40px;
 	line-height: 50px;
@@ -31,4 +31,16 @@ a{
 }
 .red{
 	background: #c4383f;
+}
+.error{
+	display:block;
+	margin-left:1000px;
+	background: white;
+	width: 553px;
+	font-size: 20px;
+	color: #f45342;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 30px;
+	text-transform:uppercase;
 }

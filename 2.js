@@ -27,10 +27,12 @@
         $(':text').addClass('green');
         Object.keys(data.error).map(function(key){
           if(key == 'Credit Card'){
-            $('.CreditCard').addClass('red').val(data.error[key]);
+            $('.CreditCard').addClass('red');
+            $('div.CreditCard').text(data.error[key]);
           }
           else{
-            $('.' + key).addClass('red').val(data.error[key]);
+            $('.' + key).addClass('red');
+            $('div.' + key).text(data.error[key]);
           }
         });
       }
